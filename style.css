@@ -1,0 +1,46 @@
+* {
+  margin: 0; /* Space Outside */
+  padding: 0; /* Space Inside */
+  box-sizing: border-box; /* Border Box won't allow content to grow */
+}
+
+body {
+  display: flex;
+  align-items: center; /* Aligns the content vertically */
+  justify-content: center; /* Aligns the content horizontally */
+  min-height: 100vh;
+}
+
+.container {
+  position: relative; /* Add position Relative to be positioned to it's normal position */
+  width: 40vw;
+  height: 60vh;
+}
+
+.imgContainerBefore, .imgContainerAfter {
+  position: absolute; /* Add position Absolute to stack all the content */
+  width: 40vw;
+  height: 60vh;
+}
+
+.imgContainerBefore {
+  width: 20vw;
+  overflow: hidden;
+}
+
+img {
+  width: 40vw; /* Scales with the size of the screen */
+  height: 60vh; /* Scales with the size of the screen */
+  object-fit: cover; /* Add a better usability to images when resizing the screen */
+}
+
+.slider {
+  width: 0.5rem;
+  background: white;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
